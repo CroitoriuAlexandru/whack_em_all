@@ -11,7 +11,7 @@ let scoreDisplay;
 let scoreValue = 20;
 let moleArray = [];
 initialize();
-// Create mole array as objects witch hold the mole element's and its timeId
+// create mole array as objects witch hold the mole element's and its timeId
 function initialize() {
   let moles = document.getElementsByClassName("mole");
   Array.from(moles).forEach((mole) => {
