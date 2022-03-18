@@ -1,5 +1,6 @@
 import { randomNumber, randomNumberBetween } from "./util.js";
 
+let scoreDisplay = document.getElementById("scoreDisplay");
 const MIN_TIME_OUT = 0.5;
 const MAX_TIME_OUT = 4;
 const MIN_TIME_IN = 2;
@@ -7,7 +8,6 @@ const MAX_TIME_IN = 4;
 const MAX_MOLE_OUT = 5;
 
 let moleOutCount = 0;
-let scoreDisplay;
 let scoreValue = 20;
 let moleArray = [];
 initialize();
@@ -18,10 +18,6 @@ function initialize() {
     mole.addEventListener("click", moleClicked);
     moleArray.push({ elem: mole, timeOutId: 0 });
   });
-}
-// recives the score element to increse score count when clicking on moles
-export function getScoreElem(scoreElem) {
-  scoreDisplay = scoreElem;
 }
 // try getting a mole out, it gets called at game intervals
 export function tryGettingMole() {

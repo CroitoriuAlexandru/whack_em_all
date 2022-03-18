@@ -6,7 +6,7 @@ import {
 
 const INTERVAL = 5; // how many times per seccond the game tries to put a mole
 let gameBoard = document.getElementById("gameBoard");
-let scoreDisplay = document.getElementById("scoreDisplay");
+
 let gameTimer = document.getElementById("gameTimer");
 let gameBtn = document.getElementById("gameBtn");
 let intervalId; // id of the interval
@@ -18,7 +18,6 @@ gameBtn.addEventListener("click", () => {
     gameBoard.classList.remove("overlay");
     scoreDisplay.innerHTML = 0;
     startTimer();
-    sendScoreElem(scoreDisplay);
     intervalId = setInterval(tryGettingMole, (1 / INTERVAL) * 1000);
     gameBtn.classList.remove("start-game");
     gameBtn.classList.add("reset-game");
@@ -32,7 +31,7 @@ gameBtn.addEventListener("click", () => {
 // handles the game timer
 function startTimer() {
   let timer = { min: 0, sec: 59 };
-  gameTimer.innerHTML = "0" + timer.min + ":" + "0" + timer.sec;
+  gameTimer.innerHTML = "00:59";
   timerId = setInterval(() => {
     if (timer.sec > 0) {
       --timer.sec;
@@ -58,4 +57,5 @@ function resetGame() {
   gameBtn.classList.remove("reset-game");
   gameBtn.classList.add("start-game");
   gameBtn.innerHTML = "Start Game";
+  gameTimer.innerHTML = "01:00";
 }
