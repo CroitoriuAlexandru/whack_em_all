@@ -1,12 +1,7 @@
-import {
-  tryGettingMole,
-  getScoreElem as sendScoreElem,
-  resetMoles,
-} from "./modules/mole.js";
+import { tryGettingMole, resetMoles } from "./modules/mole.js";
 
 const INTERVAL = 5; // how many times per seccond the game tries to put a mole
 let gameBoard = document.getElementById("gameBoard");
-
 let gameTimer = document.getElementById("gameTimer");
 let gameBtn = document.getElementById("gameBtn");
 let intervalId; // id of the interval
