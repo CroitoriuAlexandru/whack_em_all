@@ -1,5 +1,6 @@
 # whack_em_all
 
-This is my Whack Em All project 
+Classical game of Whack'em all. 
+In case you are not familiar with this game, you have to hit the moles as they come out. Hit as many moles as possible before the timer runs out and get the highest score
 
 You can have a look at : https://croitoriualexandru.github.io/whack_em_all/
